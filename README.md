@@ -23,7 +23,7 @@ https://docs.google.com/document/d/1WuZFrd3jf9XWTGAj6tK73MJ7Oa3cv0TZ9tVBlQBEmmc/
 
 ### 技術スタック
 
-言語:HTML,CSS
+言語:HTML,CSS,JS
 
 CSS ライブラリ:TailwindCSS
 

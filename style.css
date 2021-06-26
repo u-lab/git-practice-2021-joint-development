@@ -50,6 +50,13 @@ td {
 .hachi-maru {
   font-family: "Hachi Maru Pop", cursive;
 }
+.shippori-mincho {
+  font-family: "Shippori Mincho", serif;
+}
+.year-font {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
 body {
   min-height: 100vh;
 }
@@ -71,6 +78,18 @@ h1 {
 
 .footer-menu a {
   color: var(--bg-main-color) !important;
+}
+a {
+  transition: 1s;
+}
+a:hover {
+  color: var(--text-stand-color);
+}
+
+.adjust-size {
+  max-width: 1200px;
+  min-height: calc(100vh - var(--header-height));
+  /* フッター計算は手間なのでやめました… */
 }
 
 /* 下記よりフェードイン用 */
@@ -112,4 +131,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .scroll-in {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.syosetu {
+  padding-left: 1.5em;
 }

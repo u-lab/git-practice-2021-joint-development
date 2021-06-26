@@ -1,9 +1,48 @@
 /** @format */
+:root {
+  /* カラー定義 */
+  --bg-main-color: #fff9f2;
+  --text-main-color: #374151;
+  --bg-stand-color: #96e0ad;
+  --text-stand-color: #ff8587;
+  --bg-stand-2-color: #e3ec96;
+  /* ヘッダー高さ */
+  --header-height: 70px;
+  /* --footer-height: 100px; */
+  /* メディアクエリ */
+  --media-sm: 640px;
+  --media-md: 768px;
+  --media-lg: 1024px;
+  --media-xl: 1280px;
+}
+
+.bg-stand-color {
+  background-color: var(--bg-stand-color);
+}
+.text-stand-color {
+  color: var(--text-stand-color);
+}
+.bg-stand-2-color {
+  background-color: var(--bg-stand-2-color);
+}
+
 /* tailwindで謎に当てられるフォントの修正 */
 body {
+  background-color: var(--bg-main-color);
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+td {
+  color: var(--text-main-color);
+}
+
 /* フォント系 */
 .kiwi-maru {
   font-family: "Kiwi Maru", serif;
@@ -11,6 +50,89 @@ body {
 .hachi-maru {
   font-family: "Hachi Maru Pop", cursive;
 }
+.shippori-mincho {
+  font-family: "Shippori Mincho", serif;
+}
+.year-font {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+}
 body {
   min-height: 100vh;
+}
+header {
+  height: var(--header-height);
+  background-color: var(--text-main-color);
+}
+footer {
+  /* height: var(--footer-height); */
+  background-color: var(--text-main-color);
+}
+footer p {
+  color: var(--bg-main-color);
+}
+header p,
+h1 {
+  color: var(--bg-main-color);
+}
+
+.footer-menu a {
+  color: var(--bg-main-color) !important;
+}
+a {
+  transition: 1s;
+}
+a:hover {
+  color: var(--text-stand-color);
+}
+
+.adjust-size {
+  max-width: 1200px;
+  min-height: calc(100vh - var(--header-height));
+  /* フッター計算は手間なのでやめました… */
+}
+
+/* 下記よりフェードイン用 */
+
+/* MITライセンスで使用 */
+/**
+Copyright (c) 2021 by Yuki Nose (https://codepen.io/yukinouz1/pen/mdeNQXe)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+ */
+.fade-in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in-up {
+  transform: translate(0, 50px);
+}
+
+.fade-in-down {
+  transform: translate(0, -50px);
+}
+
+.fade-in-left {
+  transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.syosetu {
+  padding-left: 1.5em;
 }
